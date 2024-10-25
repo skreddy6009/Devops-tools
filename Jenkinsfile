@@ -2,7 +2,7 @@ pipeline {
  agent { label "Agent" }
   stages { 
         stage("installing prerequisites") { 
-        steps { 
+       /*steps { 
            script { 
               sh """
                     sudo yum install git maven -y  
@@ -13,12 +13,12 @@ pipeline {
                     sudo systemctl enable docker 
                     sudo systemctl start docker
                     sudo chmod 777 /var/run/docker.sock 
-                    sudo sytemctl restart docker 
+                    sudo systemctl restart docker 
                     sudo docker info 
                  """  
               } 
              } 
-            } 
+            } */
            stage("installing SonarQube tool") { 
              steps { 
               script { 
