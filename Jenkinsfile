@@ -22,14 +22,14 @@ pipeline {
            stage("installing SonarQube tool") { 
              steps { 
               script { 
-                 sh "docker run -itd --name sonarQube -p 9000-9000 sonarqube:lts-community" 
+                 sh "docker run -itd --name sonarQube -p 9000:9000 sonarqube:lts-community" 
               } 
             } 
           }
           stage("instlling Nexustool") { 
           steps { 
             script { 
-                 sh "docker run -itd --name nexus -p 081-8081 sonartype/nexus3" 
+                 sh "docker run -itd --name nexus -p 8081:8081 sonatype/nexus3" 
               } 
             } 
           } 
