@@ -1,8 +1,8 @@
 pipeline { 
  agent { label "Agent" }
   stages { 
-        stage("installing prerequisites") { 
-       /*steps { 
+        /*stage("installing prerequisites") { 
+        steps { 
            script { 
               sh """
                     sudo yum install git maven -y  
