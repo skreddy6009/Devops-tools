@@ -1,5 +1,6 @@
 pipeline { 
- agent { label "docker-slave" }
+ // agent { label "docker-slave" }
+ agent any 
   stages { 
         /*stage("installing prerequisites") { 
         steps { 
