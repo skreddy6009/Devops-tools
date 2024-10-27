@@ -1,5 +1,5 @@
 pipeline { 
- agent { label "Agent" }
+ agent { label "docker-slave" }
   stages { 
         /*stage("installing prerequisites") { 
         steps { 
@@ -33,13 +33,5 @@ pipeline {
               } 
             } 
           } 
-           stage("instlling Trivy") { 
-          steps { 
-            script {  
-                 sh "curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin v0.18.3" 
-                 sh "trivy --version"
-              } 
-            } 
-          }  
       } 
   }
